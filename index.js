@@ -1,11 +1,14 @@
-const initializeGame = () =>{
-    return new Promise((resolve, reject)=> {
-        setTimeout(resolve("Game started"), 2000);
-    })
+function initializeGame() {
+    return new Promise((resolve) => {
+        console.log("Initializing game...");
+
+        setTimeout(() => {
+            console.log("Game successfully initialized!");
+            resolve();
+        }, 2000);
+    });
 }
 
-initializeGame()
-.then((message)=>{
-    console.log(message);
-    
-})
+initializeGame().then(() => {
+    console.log("Ready to start the game!");
+});
