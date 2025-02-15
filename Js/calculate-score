@@ -1,0 +1,15 @@
+const calculateScore = async ()=>{   
+    let score = 0 
+    await new Promise((resolve,reject)=>{
+        resolve()
+        })
+        .then(()=>{
+            if(true){
+                score += 10
+                return score
+            }
+        }
+    )
+    setTimeout(()=>{console.log(score)},2000)
+}
+calculateScore()
